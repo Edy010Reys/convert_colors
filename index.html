@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Code Converter</title>
+    <title>Conversão de Cores HEX/RGB</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -21,25 +21,24 @@
     <div class="square square5"></div>
 
     <div class="color-picker">
-        <!-- div to display the color  -->
-        <div id="colorCheck">Check The Color Here</div>
+        <div id="colorCheck">Coloque a sua Cor</div>
         <div class="color-info">
-            <!-- Hex Group -->
+            
             <div class="color-group">
                 <p>HEX</p>
                 <input id="hexValue" type="text">
                 <abbr id="copyHex" title="Copy To Clipboard"><i class="fa-regular fa-copy"></i></abbr>
             </div>
-            <!-- RGB Group -->
+            
             <div class="color-group">
                 <p>RGB</p>
                 <input type="text" id="rgbValue">
                 <abbr id="copyRGB" title="Copy To Clipboard"><i class="fa-regular fa-copy"></i></abbr>
             </div>
         </div>
-        <!-- Buttons -->
-        <button id="btn">Convert</button>
-        <button id="bg-toggler">View Color In Background</button>
+        
+        <button id="btn">Converter</button>
+        <button id="bg-toggler">Ver cor em segundo plano</button>
     </div>
 
     <script src="script.js"></script>
