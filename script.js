@@ -26,7 +26,7 @@ btn.addEventListener("click", () => {
     colorPicker.style.borderColor = hexValue.value;
   } else {
     alert(
-      "Please input a valid HEX (#RRGGBB or #RGB) or RGB (rgb(r, g, b)) value."
+      "Por favor, insira um valor HEX válido #RRGGBB ou RGB rgb(r, g, b)."
     );
   }
 });
@@ -51,17 +51,15 @@ bgToggler.addEventListener("click", () => {
   }
 });
 
-// Function to validate the hex value
+
 function isValidHex(hex) {
   return /^#([0-9A-F]{3}){1,2}$/i.test(hex);
 }
 
-// Function to validate the rgb value
 function isValidRgb(rgb) {
   return /^rgb\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*\)$/i.test(rgb);
 }
 
-// Function to convert hex value into rgb value
 function hexToRgb(hex) {
   let r, g, b;
   if (hex.length === 4) {
@@ -78,7 +76,6 @@ function hexToRgb(hex) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-// Function to convert rgb value to hex value
 function rgbToHex(r, g, b) {
   const hexR = r.toString(16).padStart(2, "0").toUpperCase();
   const hexG = g.toString(16).padStart(2, "0").toUpperCase();
@@ -88,19 +85,16 @@ function rgbToHex(r, g, b) {
 }
 
 
-// Reusable function to handle copying and icon change
 function handleCopy(inputElement, copyButton) {
   const copyValue = inputElement.value;
   navigator.clipboard.writeText(copyValue);
 
   const icon = copyButton.querySelector("i");
-  // Change icon to checkmark
   icon.classList.remove("fa-regular", "fa-copy");
   icon.classList.add("fa-solid", "fa-check");
 
   copyButton.title = `${inputElement.id === 'hexValue' ? 'Hex' : 'RGB'} value copied`;
 
-  // Revert the icon after 3 seconds
   setTimeout(() => {
     icon.classList.remove("fa-solid", "fa-check");
     icon.classList.add("fa-regular", "fa-copy");
@@ -109,6 +103,5 @@ function handleCopy(inputElement, copyButton) {
   }, 3000);
 }
 
-// Event listeners for copying
 copyHex.addEventListener("click", () => handleCopy(hexValue, copyHex));
 copyRGB.addEventListener("click", () => handleCopy(rgbValue, copyRGB));
