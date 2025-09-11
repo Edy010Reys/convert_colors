@@ -60,7 +60,6 @@ body {
     }
 }
 
-/* Specific styles for each square */
 .square1 {
     left: 10%;
     animation-delay: 5s;
@@ -86,7 +85,6 @@ body {
     animation-delay: 4s;
 }
 
-/* Main Styles  */
 .color-picker {
     padding: 20px;
     background: transparent;
